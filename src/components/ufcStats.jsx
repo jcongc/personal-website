@@ -3,7 +3,7 @@ import Papa from 'papaparse';
 import Input from '@mui/material/Input';
 import { Button } from "@mui/material";
 
-const Projects = () => {
+const MmaStats = () => {
     const [data, setData] = useState(null);
     const [searchFighter, setSearchFighter] = useState('');
     const [filteredData, setFilteredData] = useState([]);
@@ -39,9 +39,9 @@ const Projects = () => {
     }
 
     return (
-        <div className="projects-container">
-            <div className="projects-box">
-                <Input type="text" placeholder='Enter Fighter Name:' value={searchFighter} onChange={e => setSearchFighter(e.target.value)} />
+        <div className="stats-container">
+            <div className="stats-box">
+                <Input type="text" placeholder='Enter Fighter Name' value={searchFighter} onChange={e => setSearchFighter(e.target.value)} />
                 {filteredData.length === 1 ? (
                     <div>
                         <h2>{filteredData[0].nickname !== "" ? `${filteredData[0].name.split(" ")[0]} "${filteredData[0].nickname}" ${filteredData[0].name.split(" ")[1]}` : filteredData[0].name}</h2>
@@ -55,7 +55,7 @@ const Projects = () => {
                         <ul>
                             {filteredData.slice(0, 5).map((item, index) => (
                                 <React.Fragment key={index}>
-                                    <Button onClick={() => setSearchFighter(item.name)}>{item.name}</Button> <br/>
+                                    <Button sx = {{color: "black"}} onClick={() => setSearchFighter(item.name)}>{item.name}</Button> <br/>
                                 </React.Fragment>
                             ))}
                         </ul>
@@ -66,4 +66,4 @@ const Projects = () => {
     );
 }
 
-export default Projects;
+export default MmaStats;

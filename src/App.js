@@ -1,16 +1,16 @@
 import './App.css';
-import Header from './components/header';
 import { Route, BrowserRouter, Routes} from 'react-router-dom';
-import Projects from './components/projects';
+import MmaStats from './components/ufcStats';
+import HomeScreen from './components/homescreen';
 
 function App() {
   
   return (
     <>
-      <Header />
       <BrowserRouter>
         <Routes>
-          <Route path='/projects' element={<Projects />}/>
+          <Route path='/' element={<HomeScreen />} />
+          <Route path='/projects' element={<MmaStats />}/>
         </Routes>
       </BrowserRouter>
     </>
