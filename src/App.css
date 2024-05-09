@@ -1,0 +1,57 @@
+body { 
+  font-family: Calibri;
+  background-color: #fff;
+}  
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  margin: 40px;
+  border-width: 0px 0px 1px 0px;
+  border-style: solid;
+  border-color: black;
+}
+
+.header-button-container {
+  display: flex;
+  flex-direction: row;
+  width: 250px;
+  justify-content: space-between;
+}
+
+.header-button {
+  border: none;
+  background-color: black;
+  color: white;
+  border-radius: 30px;
+  height: 60px;
+  text-align: center;
+  width: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  transition: background-color 0.5s ease;
+}
+
+.header-button:hover {
+  background-color: #555;
+  color: white;
+}
+
+.header-button:active {
+  background-color: #333;
+  color: white;
+}
+
+.projects-container {
+  display: flex;
+  justify-content: center;
+}
+
+.projects-box {
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+}
