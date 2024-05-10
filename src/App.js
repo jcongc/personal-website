@@ -1,18 +1,15 @@
 import './App.css';
-import { Route, BrowserRouter, Routes} from 'react-router-dom';
-import MmaStats from './components/ufcStats';
+import Header from './components/header';
 import HomeScreen from './components/homescreen';
+import GlobalFooter from './components/footer';
 
 function App() {
   
   return (
     <>
-      <BrowserRouter>
-        <Routes>
-          <Route path='/' element={<HomeScreen />} />
-          <Route path='/projects' element={<MmaStats />}/>
-        </Routes>
-      </BrowserRouter>
+    <Header />
+    <HomeScreen />
+    <GlobalFooter />
     </>
   );
 }
