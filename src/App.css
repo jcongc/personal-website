@@ -249,8 +249,8 @@ ul {
 }
 
 .projects-image {
-  width: 450px;
-  height: 253px;
+  width: 63%;
+  height: 35%;
 }
 
 .overlay-text {
@@ -444,5 +444,28 @@ footer div a:hover {
   .footer-icon {
     width: 25px;
     height: 25px;
+  }
+}
+
+@media screen and (max-width: 1800px) {
+  .skills-list {
+    font-size: 10px;
+  }
+  .port-button-container {
+    width: 100px;
+    margin: 0;
+    font-size: 10px;
+  }
+
+  .port-button-container button {
+    width: 50px;
+    margin: 0px;
+    padding: 5px 12px;
+  }
+}
+
+@media screen and (min-width: 2000px) {
+  .scroll-down {
+    display: none;
   }
 }
