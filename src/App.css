@@ -53,12 +53,12 @@ body {
 }
 
 .header-button:hover {
-  background-color: #aaa; /* changed from #555 to a lighter shade */
+  background-color: #aaa;
   color: black;
 }
 
 .header-button:active {
-  background-color: #777; /* changed from #333 to a lighter shade */
+  background-color: #777;
   color: black;
 }
 
