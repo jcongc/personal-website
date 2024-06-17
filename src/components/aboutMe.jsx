@@ -4,14 +4,18 @@ const AboutMe = () => {
     return (
     <div className="about-me-wrapper">
         <div id="about-me" className="about-me">
-            <h1>About me</h1>
-            <p>
-                Hello! I'm Jason, a Computer Science and Mathematics student at UNSW with a passion for coding and problem-solving. When I was younger, I was always fascinated by how concepts that seemed really abstract at the time could be applied in the real world, and as I progress further into my degrees, I have come to appreciate the intricacies of these ideas, and how they appear in our daily life, whether it be in the form of an algorithm or a mathematical model. I strongly believe that the best way to learn anything is to apply it, and hence love working on projects that challenge me and allow me to learn new technologies and concepts. 
-            </p>
-            <p>I am actively seeking opportunities to apply my skills in a real-world settings, and believe that industry experience is invaluable.</p>
-            <p>
-                In addition to my academic pursuits, I’ve been an avid fan of MMA and other combat sports such as wrestling, BJJ and boxing. I enjoy (sometimes) going to Muay Thai and BJJ classes. Currently, I am trying to combine my passion and interest in machine learning by trying to create an accurate fight predictor, as well as a data scraper to help my fight predictor. 
-            </p>
+            <h1 className="about-me-header">I'm Jason, a second year university student studying CS/Maths at UNSW.</h1>
+            <p>I vividly remember when I realised how much I enjoyed problem solving. The teacher was explaining factorials, something that seemed abstract at the time, somehow linked it to a problem that we were doing. I thought it was amazing how something that seemed so theoretical could actually be applied and useful in real life, and it allowed me to appreciate the beauty of problem solving.</p>
+            
+            <p>I'm actively seeking industry opportunities as they offer invaluable experience and allows for an insight into skills outside the classroom.</p>
+
+            <p>I've been obsessed with MMA since high school, and I saw this an opportunity to apply my current studies. I'm currently working on a data scraper to get MMA statistics for a fighter, and after that, hopefully making a fight predictor using machine learning models.</p>            
+            <p>I am currently studying these courses:</p>
+            <ul>
+                <li>MATH2601 - Higher Linear Algebra</li>
+                <li>MATH2901 - Higher Theory of Statistics</li>
+                <li>MATH2221 - Higher Differential Equations</li>
+            </ul>
         </div>
         <img src="me.png" alt="img of me" className="me-pic"/>
     </div>

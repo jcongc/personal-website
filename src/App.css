@@ -270,6 +270,10 @@ ul {
   -ms-transform: translate(-50%, -50%)
 }
 
+.about-me-intro {
+  color: #fff;
+}
+
 .proj-wrapper:hover .projects-image {
   opacity: 0.3;
 }
