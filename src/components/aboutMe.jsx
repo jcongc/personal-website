@@ -12,12 +12,6 @@ const AboutMe = () => {
             <p>
                 In addition to my academic pursuits, I’ve been an avid fan of MMA and other combat sports such as wrestling, BJJ and boxing. I enjoy (sometimes) going to Muay Thai and BJJ classes. Currently, I am trying to combine my passion and interest in machine learning by trying to create an accurate fight predictor, as well as a data scraper to help my fight predictor. 
             </p>
-            <p>My current favourite fighters are:</p>
-            <ul>
-                <li>Alexander Volkanovski</li>
-                <li>Steve Erceg</li>
-                <li>Max Holloway</li>
-            </ul>
         </div>
         <img src="me.png" alt="img of me" className="me-pic"/>
     </div>

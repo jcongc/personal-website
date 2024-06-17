@@ -134,6 +134,7 @@ body {
 .me-pic {
   width: 30%;
   height: 30%;
+  border-radius: 30px;
 }
 
 .port-wrapper {
@@ -147,7 +148,6 @@ body {
 
 .port-container {
   text-align: center;
-  width: 30%;
   border-style: solid;
   border-width: 1px;
   border-color: #fff;
@@ -155,8 +155,6 @@ body {
   padding: 20px;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
   margin-bottom: 30px;
 }
 
@@ -240,6 +238,10 @@ ul {
   color: black;
 }
 
+.proj-text {
+  color: black;
+}
+
 .proj-container h1 {
   font-size: 50px;
 }
@@ -249,39 +251,36 @@ ul {
 }
 
 .projects-image {
-  width: 63%;
-  height: 35%;
+  opacity: 1;
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: .5s ease;
+  backface-visibility: hidden;
+  border-radius: 30px;
 }
 
-.overlay-text {
+.image-layer {
+  transition: .5s ease;
+  opacity: 0;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  opacity: 0;
-  transition: opacity 0.5s ease;
+  -ms-transform: translate(-50%, -50%)
 }
 
-.image-layer {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
-  opacity: 0;
-  transition: opacity 0.5s ease;
+.proj-wrapper:hover .projects-image {
+  opacity: 0.3;
 }
 
-.proj-wrapper:hover .overlay-text,
 .proj-wrapper:hover .image-layer {
   opacity: 1;
 }
 
-.proj-container a,
-.proj-container a:visited {
-  color: white;
-  text-decoration: none;
+.image-text {
+  color: black;
+  font-size: 20px;
 }
 
 .stats-container {
@@ -343,6 +342,15 @@ footer div a:hover {
 
 #clashofclans {
   border-radius: 50%;
+}
+
+@media screen and (max-width: 1500px) {
+ 
+  .port-wrapper {
+    flex-direction: column;
+    width: 50%;
+  }
+  
 }
 
 @media screen and (max-width: 768px) {
