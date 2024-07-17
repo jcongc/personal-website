@@ -9,7 +9,7 @@ const AboutMe = () => {
             
             <p>I'm actively seeking industry opportunities as they offer invaluable experience and allows for an insight into skills outside the classroom.</p>
 
-            <p>I've been obsessed with MMA since high school, and I saw this an opportunity to apply my current studies. I'm currently working on a data scraper to get MMA statistics for a fighter, and after that, hopefully making a fight predictor using machine learning models.</p>            
+            <p>I've been obsessed with MMA since high school, and I saw this as an opportunity to apply my current studies. I'm currently working on a data scraper to get MMA statistics for a fighter, and after that, hopefully making a fight predictor using machine learning models.</p>            
         </div>
         <img src="me.png" alt="img of me" className="me-pic"/>
     </div>
