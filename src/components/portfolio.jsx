@@ -13,7 +13,7 @@ const Portfolio = () => {
                     <li>C++</li><br/>
                     <li>Javascript/Typescript<span> - COMP1531</span></li><br/>
                     <li>HTML/CSS/React<span> - COMP6080/Personal Website (This one!)</span></li><br/>
-                    <li>Python</li><br/>
+                    <li>Python<span> - MMA Data Scraper (Used BeautifulSoup)</span></li><br/>
                     <li>SQL/PostgreSQL/Non-SQL/PLpgSQL<span> - COMP3311</span></li><br/>
                     <li>Assembly (MIPS)<span> - COMP1521</span></li><br/>
                     <li>Java</li><br/>
