@@ -71,6 +71,17 @@ body {
   flex-direction: column;
 }
 
+.about-me-intro {
+  color: blue;
+  font-weight: bold;
+}
+
+.interests {
+  color: plum;
+  font-size: larger;
+  font-weight: bold;
+}
+
 .scroll-down {
   position: absolute;
   bottom: 10px;
@@ -189,8 +200,13 @@ body {
 }
 
 .port-container button:hover {
-  background-color: white; 
+  background-color: rgb(203, 226, 150); 
   color: black; 
+  transition: background-color 0.4s ease;
+}
+
+.port-container button:not(:hover) {
+  transition: background-color 0.4s ease;
 }
 
 .port-container button.selected {
@@ -244,6 +260,15 @@ ul {
 
 .proj-container h1 {
   font-size: 50px;
+}
+
+.skill-button {
+  text-align: center;
+}
+
+.skill-button.active {
+  background-color: white;
+  color: black;
 }
 
 .proj-wrapper {

@@ -1,23 +1,52 @@
-import React from "react";
+import React, { useState } from 'react';
+
 
 const Portfolio = () => {
 
+    const [currentSkill, setCurrentSkill] = useState('prog-lang');
+
+    const changeSkillDisplay = (skill) => {
+        setCurrentSkill(skill);
+    };
 
     return (
         <div className="port-wrapper">
             <div className="port-container" id="portfolio">
             <h1>Skills</h1>
             <div className="skills-list">
+                <div>
+                    <button className={`skill-button ${currentSkill === 'prog-lang' ? 'active' : ''}`} onClick={() => changeSkillDisplay('prog-lang')}>Languages</button>
+                    <button className={`skill-button ${currentSkill === 'frameworks' ? 'active' : ''}`} onClick={() => changeSkillDisplay('frameworks')}>Frameworks</button>
+                    <button className={`skill-button ${currentSkill === 'tools' ? 'active' : ''}`} onClick={() => changeSkillDisplay('tools')}>Tools and Libraries</button>
+                </div>
                 <ul>
-                    <li>C <span> - COMP1511/COMP2521</span></li><br/>
-                    <li>C++</li><br/>
-                    <li>Javascript/Typescript<span> - COMP1531</span></li><br/>
-                    <li>HTML/CSS/React<span> - COMP6080/Personal Website (This one!)</span></li><br/>
-                    <li>Python<span> - MMA Data Scraper (Used BeautifulSoup)</span></li><br/>
-                    <li>SQL/PostgreSQL/Non-SQL/PLpgSQL<span> - COMP3311</span></li><br/>
-                    <li>Assembly (MIPS)<span> - COMP1521</span></li><br/>
-                    <li>Java</li><br/>
-                    <li>Git <span> - COMP1531/Projects</span></li><br/>
+                    {currentSkill === 'prog-lang' && (
+                        <>
+                            <li>C</li>
+                            <li>C++</li>
+                            <li>JS/TS</li>
+                            <li>HTML</li>
+                            <li>CSS</li>
+                            <li>Python</li>
+                            <li>SQL</li>
+                            <li>Assembly (MIPS)</li>
+                            <li>Java</li>
+                        </>
+                    )}
+                    {currentSkill === 'tools' && (
+                        <>
+                            <li>Git</li>
+                            <li>PhotoShop</li>
+                            <li>BeautifulSoup</li>
+                            <li>RESTful API</li>
+                        </>
+                    )}
+                    {currentSkill === 'frameworks' && (
+                        <>
+                            <li>React</li>
+                            <li>Angular</li>
+                        </>
+                    )}
                 </ul>
             </div>
             </div>
