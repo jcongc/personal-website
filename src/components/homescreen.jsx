@@ -13,6 +13,13 @@ const HomeScreen = () => {
                     <span className="about-me">
                         Aspiring Software Engineer @ UNSW
                     </span>
+                    <span className="contact-info">
+                        <h3>Contact:</h3>
+                    <br />
+                        Email: jasoncongcchen@gmail.com
+                    <br />
+                        Phone: 0481 675 688
+                    </span>
                 </div>
                 <div className="links">
                     <a href="https://github.com/jcongc" target="_blank" rel="noopener noreferrer">

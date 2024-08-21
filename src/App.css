@@ -226,3 +226,11 @@ body {
 .experience strong {
   color: #FF69B4;
 }
+
+.contact-info {
+  color: navajowhite;
+}
+
+.contact-info h3{
+  margin: 0 0 0 0;
+}
