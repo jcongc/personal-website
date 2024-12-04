@@ -1,234 +1,282 @@
-body { 
-  color: #F7DC6F;
-  background-color: #7091E6;
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+:root {
+  --primary-bg: #7091E6;
+  --secondary-bg: #3D52A0;
+  --accent-color: #ffffff;
+  --hover-bg: #C9C3E3;
+  --hover-color: #455A64;
+  --gradient-start: #050102;
+  --gradient-mid1: #120a2d;
+  --gradient-mid2: #2a1c9c;
+  --gradient-end: #1a7f77;
+}
+
+body {
+  color: var(--accent-color);
+  background: linear-gradient(-45deg, var(--gradient-start), var(--gradient-mid1), var(--gradient-mid2), var(--gradient-end));
+  background-size: 400% 400%;
+  font-family: 'Lato', 'Avenir', 'Helvetica', 'Arial', sans-serif;
+  animation: gradient 15s ease infinite;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pageFadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes gradient {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
 }
 
 .homescreen-container {
-  width: 50%;
-  height: 50%;
-  position: absolute;
-  top:0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  margin: auto;
+  width: 90%;
+  max-width: 1200px;
+  height: 100vh;
   display: flex;
   flex-direction: column;
-  justify-content: left;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  margin: 0 auto;
 }
 
 .upper-homescreen {
   display: flex;
+  flex-wrap: wrap;
   width: 100%;
-  height: 70%;
-  flex-direction: row;
+  justify-content: center;
 }
 
 .self-intro {
-  background-color: #3D52A0;
-  border-radius: 30px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding-left: 10%;
-  padding-right: 10%;
-  width: 70%;
+  text-align: center;
+  padding: 20px;
+  animation: fadeIn 1s ease-out;
 }
 
-.name {
-  font-size: 80px;
-  margin-bottom: 20px;
+.self-intro .name,
+.self-intro .subtitle,
+.self-intro .email,
+.homescreen-button {
+  opacity: 0;
+  animation: fadeIn 1.5s ease-out forwards;
 }
 
-.about-me {
-  font-size: 30px;
-  font-family: "Anek Devanagari", sans-serif;
-  font-optical-sizing: auto;
-  font-style: normal;
+.self-intro .name {
+  font-size: 3rem;
+  font-weight: bold;
+  color: var(--primary-color);
+  margin-bottom: 10px;
+  animation-delay: 0.2s;
+}
+
+.self-intro .subtitle {
+  font-size: 1.5rem;
   font-weight: 400;
-  color: #fff;
+  color: var(--secondary-text); 
+  animation-delay: 0.4s;
 }
 
-.links {
-  display: flex;
-  width: 20%;
-  flex-direction: column;
-  justify-content: center;
+.self-intro .email {
+  font-size: 1.2rem;
+  margin-top: 10px;
 }
 
-.links a {
-  height: 40%;
-  margin-top: 5%;
-  margin-bottom: 5%;
-  display: flex;
-  justify-content: center;
-  color: #F7DC6F;
+.self-intro .email a {
+  color: var(--accent-color);
+  text-decoration: none;
+  font-weight: 400;
 }
 
-.icon {
-  height: 100%;
+.self-intro .email a:hover {
+  text-decoration: underline;
 }
 
 .lower-homescreen {
   display: flex;
-  flex-direction: row;
-  justify-content: align-left;
-  height: 20%;
-  width: 100%;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 20px;
+  margin-top: 20px;
 }
 
 .homescreen-button {
-  width: 50%;
-  margin: 20px 2% 0 0;
-  border-style: none;
+  flex: 1;
+  max-width: 300px;
+  margin: 0 auto;
+  padding: 10px 20px;
+  border: none;
   border-radius: 15px;
   background-color: #EDE8F5;
-  font-size: 50px;
-  color: #7091E6;
-  font-family: "Anek Devanagari", sans-serif;
+  font-size: 1.5rem;
+  color: var(--primary-bg);
   text-align: center;
   text-decoration: none;
   transition: all 0.3s ease-in-out;
 }
 
 .homescreen-button:hover {
-  background-color: #C9C3E3;
-  color: #455A64;
+  background-color: var(--hover-bg);
+  color: var(--hover-color);
   transform: scale(1.05);
-}
-
-.centre {
-  display: flex;
-  justify-content: center;
-  width: 100%;
 }
 
 .proj-container {
   display: flex;
   flex-direction: column;
-  width: 100%;
   text-align: center;
+  margin-top: 50px;
 }
 
 .proj-heading {
-  font-size: 100px;
-  font-family: "Anek Devanagari", sans-serif;
-  font-optical-sizing: auto;
-  font-style: normal;
-  font-weight: 400;
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 30px;
 }
 
 .proj-wrapper {
   display: flex;
-  flex-direction: row;
-  justify-content: space-around;
+  flex-direction: column;
+  gap: 30px;
+  margin-top: 20px;
 }
 
 .proj {
-  background-color: #3D52A0;
+  background-color: transparent;
   text-decoration: none;
   color: white;
-  width: 100%;
-  margin-left: 10%;
-  margin-right: 10%;
   border-radius: 20px;
-  font-family: "Anek Devanagari", sans-serif;
-  font-optical-sizing: auto;
-  font-style: normal;
-  font-weight: 400;
+  padding: 20px;
 }
 
 .proj-img {
-  height: 300px;
-}
-.personal-site{
-  height: 240px;
-  padding: 30px;
-  border-radius: 50px;
-}
-
-.proj a:link {
-  text-decoration: none;
-  color: white;
-}
-
-.proj a:visited {
-  text-decoration: none;
-  color: white;
+  max-width: 20%;
+  height: auto;
+  border-radius: 10px;
 }
 
 .proj-tech {
-  color: #FF69B4;
-  font-family: "Anek Devanagari", sans-serif;
+  font-size: 1.2rem;
+  color: #D69B9B;
 }
 
 .proj-desc {
+  font-size: 1rem;
   color: #C9E4CA;
 }
 
-.back-button {
-  position: absolute;
-  top: 0;
-  left: 0;
-  background-color: white;
+.proj a {
+  text-decoration: none;
   color: white;
+}
+
+.proj a:hover {
+  text-decoration: underline;
+}
+
+.back-button-link {
+  display: inline-block;
+  background-color: transparent;
+  padding: 0;
+  border: none;
+  text-decoration: none;
+}
+
+.back-button {
+  background-color: transparent;
   margin-top: 30px;
   margin-left: 30px;
   transition: all 0.3s ease-in-out;
 }
 
 .back-button:hover .arrow {
-  fill: #C9C3E3; 
+  fill: #C9C3E3;
 }
 
-.back-button-wrapper {
-  display: inline-block;
+.arrow {
+  fill: #ffffff;
 }
 
 .experience-container {
   display: flex;
   flex-direction: column;
+  text-align: center;
+  margin-top: 50px;
+  padding: 20px;
 }
 
 .experience-heading {
-  font-size: 100px;
-  font-family: "Anek Devanagari", sans-serif;
-  font-optical-sizing: auto;
-  font-style: normal;
-  font-weight: 400;
-  text-align: center;
+  font-size: 3rem;
+  font-weight: bold;
+  color: var(--accent-color);
+  margin-bottom: 30px;
 }
 
 .experience-wrapper {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+  gap: 30px;
+  margin-top: 20px;
+  justify-content: center;
+  align-items: center;
 }
 
 .experience {
-  background-color: #3D52A0;
   text-decoration: none;
-  width: 100%;
-  margin-left: 5%;
-  margin-right: 5%;
   color: white;
   border-radius: 20px;
-  font-family: "Anek Devanagari", sans-serif;
-  font-optical-sizing: auto;
-  font-style: normal;
   font-weight: 400;
-  text-align: center;
-  padding: 0 20px 20px 20px;
+  padding: 20px;
+  width: 30%;
+}
+
+.experience h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.experience p {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  text-align: left;
+  margin-left: 20px;
 }
 
 .experience strong {
-  color: #FF69B4;
+  color: #B59BC1;
 }
 
-.contact-info {
-  color: navajowhite;
+.page-content {
+  opacity: 0;
+  animation: pageFadeIn 0.5s ease-out forwards;
 }
 
-.contact-info h3{
-  margin: 0 0 0 0;
+.page-content-experience {
+  animation-delay: 0.3s;
+}
+
+.page-content-projects {
+  animation-delay: 0.3s;
 }
